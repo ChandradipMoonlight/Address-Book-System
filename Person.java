@@ -47,6 +47,5 @@ public class Person {
 				", state=" + state + 
 				", zip=" + zip + 
 				", phoneNum=" + phoneNum + "]";	
-	}
-	
+	}	
 }
