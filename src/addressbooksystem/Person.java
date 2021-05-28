@@ -1,5 +1,7 @@
 package addressbooksystem;
 
+import java.util.Scanner;
+
 public class Person {
     // VARIABLES DECLARATIONS
     private String fname;
