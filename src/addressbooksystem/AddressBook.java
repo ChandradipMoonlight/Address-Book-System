@@ -121,49 +121,51 @@ public class AddressBook {
         }
         return addressBook;
     }
-        //FUNCTION TO GET PEOPLE BY CITY AND STATE TOGETHER
-        void viewByCityAndState(LinkedList<Person> addressBook){
-            Map<String,Person> viewAddressBook = new TreeMap<>();
-            for (Person person : addressBook){
-                String fullAddress = person.getCity()+" "+person.getState();
-                viewAddressBook.put(fullAddress, person);
-            }
-            viewAddressBook.forEach((k,v)->System.out.println(v.toString()));
+
+    //FUNCTION TO SORT RECORDS BY NAME
+    void sortByName(LinkedList<Person> addressBook){
+        Map<String,Person> sortedAddressBook = new TreeMap<>();
+        for (Person person : addressBook){
+            String fullName = person.getFName()+person.getLName();
+            sortedAddressBook.put(fullName, person);
+        }
+        sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
     }
-      //FUNCTION TO SORT RECORDS BY NAME
-        void sortByName(LinkedList<Person> addressBook){
-            Map<String,Person> sortedAddressBook = new TreeMap<>();
-            for (Person person : addressBook){
-                String fullName = person.getFName()+person.getLName();
-                sortedAddressBook.put(fullName, person);
-            }
-            sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
-        }
 
-        //FUNCTION TO SORT RECORDS BY CITY
-        void sortByCity(LinkedList<Person> addressBook){
-            Map<String,Person> sortedAddressBook = new TreeMap<>();
-            for (Person person : addressBook){
-                sortedAddressBook.put(person.getCity(), person);
-            }
-            sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
+    //FUNCTION TO SORT RECORDS BY CITY
+    void sortByCity(LinkedList<Person> addressBook){
+        Map<String,Person> sortedAddressBook = new TreeMap<>();
+        for (Person person : addressBook){
+            sortedAddressBook.put(person.getCity(), person);
         }
+        sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
+    }
 
-        //FUNCTION TO SORT RECORDS BY STATE
-        void sortByState(LinkedList<Person> addressBook){
-            Map<String,Person> sortedAddressBook = new TreeMap<>();
-            for (Person person : addressBook){
-                sortedAddressBook.put(person.getState(), person);
-            }
-            sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
+    //FUNCTION TO SORT RECORDS BY STATE
+    void sortByState(LinkedList<Person> addressBook){
+        Map<String,Person> sortedAddressBook = new TreeMap<>();
+        for (Person person : addressBook){
+            sortedAddressBook.put(person.getState(), person);
         }
-        
-      //FUNCTION TO SORT RECORDS BY ZIP
-        void sortByZip(LinkedList<Person> addressBook){
-            Map<Integer,Person> sortedAddressBook = new TreeMap<>();
-            for (Person person : addressBook){
-                sortedAddressBook.put(person.getZip(), person);
-            }
-            sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
+        sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
+    }
+
+    //FUNCTION TO SORT RECORDS BY ZIP
+    void sortByZip(LinkedList<Person> addressBook){
+        Map<Integer,Person> sortedAddressBook = new TreeMap<>();
+        for (Person person : addressBook){
+            sortedAddressBook.put(person.getZip(), person);
         }
+        sortedAddressBook.forEach((k,v)->System.out.println(v.toString()));
+    }
+
+    //FUNCTION TO GET PEOPLE BY CITY AND STATE TOGETHER
+    void viewByCityAndState(LinkedList<Person> addressBook){
+        Map<String,Person> viewAddressBook = new TreeMap<>();
+        for (Person person : addressBook){
+            String fullAddress = person.getCity()+" "+person.getState();
+            viewAddressBook.put(fullAddress, person);
+        }
+        viewAddressBook.forEach((k,v)->System.out.println(v.toString()));
+    }
 }
