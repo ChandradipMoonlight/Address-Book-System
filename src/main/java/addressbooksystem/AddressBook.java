@@ -15,7 +15,7 @@ public class AddressBook {
         String fname = input.next();
         System.out.print("Enter Last name: ");
         String lname = input.next();
-        if (checkExist(fname,lname,addressBook) == true){
+        if (checkExist(fname, lname, addressBook)){
             System.out.println("Record already exists cant add !!!");
         } else {
             System.out.print("Enter Address: ");
